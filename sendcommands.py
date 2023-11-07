@@ -1,7 +1,7 @@
 import requests
 import time
 
-def send_2fa_command():
+def send_command():
     url = "http://127.0.0.1:1242/Api/Command"
     headers = {"password": "your_ipc_password"}
     data = {"Command": "your_command"}
@@ -9,5 +9,5 @@ def send_2fa_command():
     print(response.json())
 
 while True:
-    send_2fa_command()
+    send_command()
     time.sleep(20 * 60 * 60)  # 20 hours (change it)
